@@ -20,6 +20,15 @@ BUILD="$SELF/build"
 MAIN="${MAIN:-simpl}"
 SUITES=(valid scope type syntax corners)
 
+# Anyone's own folder runs as well: a directory of .simpl programs is a group
+for directory in "$SELF"/*/; do
+    [ -d "$directory" ] || continue
+    group="$(basename "$directory")"
+    [ "$group" = build ] && continue
+    case " ${SUITES[*]} " in *" $group "*) continue ;; esac
+    compgen -G "$directory/*.simpl" >/dev/null && SUITES+=("$group")
+done
+
 die() { echo "run.sh: $*" >&2; exit 2; }
 
 # The jar: wherever you already keep it. First antlr*.jar beside your grammars,
@@ -142,3 +151,6 @@ if [ $printed -gt 0 ]; then
     echo "  $printed printed, with nothing to compare against"
 fi
 echo
+
+# ORDER is not a failure; the messages are the same, only their order differs
+[ "$differ" -eq 0 ] || exit 1
