@@ -84,24 +84,16 @@ What is compared is **which messages come out**, not the order they come out in:
 - **`FAIL`** — a message is missing, extra, spelled differently or at another
   position. It prints mine and yours, to be read: these files hold my wording and
   my positions, so a `FAIL` may be a difference of convention rather than a
-  mistake — see *Reds and fixes* below.
+  mistake — see *Reds and fixes*, and *What the recorded output assumes*.
 
 The run exits non-zero only when something is `FAIL`.
 
 ## Reds and fixes
 
-Most reds are one of these, and none of them means the checker is wrong:
-
-| The red you see | What it is | The fix |
-|---|---|---|
-| every position off by one, `line 8:11` against my `line 8:12` | you count columns from 0, as ANTLR hands them; these files count from 1 | shift the column once where the message is recorded, not where it is printed, so sorting and printing agree — or take 0 and read the diff as a constant |
-| `ORDER` on a program with both kinds of message | you group by pass, I merge into one source order | nothing to fix, it passes; merge if you would rather match byte for byte |
-| `for operator +` against my `for operator '+'` | the specification's template has no quotes around ⟨op⟩, but quotes ⟨id⟩; I quote both | either reading is defensible; pick one and keep it in all three sites |
-| two messages where I have one, on one broken construct | your failed check yields a real type instead of *unknown* | yield *unknown* from a check that failed, and let every check pass over *unknown* in silence (§5.3.15 prefers the more specific error) |
-| type messages about an undeclared name | your type pass runs on names the scope pass could not resolve | type undeclared names *unknown*, so only the scope pass speaks about them |
-| whole of `syntax/` differs in wording | a different ANTLR release, whose parser messages read differently | use 4.13.2, or the container, or read those reds as version noise |
-| everything fails, nothing builds | the driver class is not `simpl` | `MAIN=yourname ./test/run.sh` |
-| a `valid/` program draws a message | most often a whole array used where §5.2.4 allows one — assigned, allocated, passed, returned | check §5.2.4, and §5.3.1's note on the right-hand side of `<-`, before touching the test |
+| The red you see | The fix |
+|---|---|
+| every position off by one, `line 8:11` against my `line 8:12` | you count columns from 0, as ANTLR hands them; these files count from 1. Shift the column where the message is recorded, not where it is printed |
+| `ORDER` on a program with both kinds of message | nothing to fix, it passes: you group by pass, I merge into one source order |
 
 ## Adding your own tests
 
