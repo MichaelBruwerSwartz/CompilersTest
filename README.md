@@ -84,16 +84,19 @@ What is compared is **which messages come out**, not the order they come out in:
 - **`FAIL`** — a message is missing, extra, spelled differently or at another
   position. It prints mine and yours, to be read: these files hold my wording and
   my positions, so a `FAIL` may be a difference of convention rather than a
-  mistake — see *Fixes*, and *What the recorded output assumes*.
+  mistake — see *What the recorded output assumes*.
 
 The run exits non-zero only when something is `FAIL`.
 
 ## Fixes
 
-| What you see | The fix |
+What has changed in the recorded cases and in the runner since they were first
+written:
+
+| What was wrong | Fix |
 |---|---|
-| every position off by one, `line 8:11` against my `line 8:12` | you count columns from 0, as ANTLR hands them; these files count from 1. Shift the column where the message is recorded, not where it is printed |
-| `ORDER` on a program with both kinds of message | nothing to fix, it passes: you group by pass, I merge into one source order |
+| columns counted from 0 inside the checker and were shifted to 1 only when printed, so the sorted order and the printed position disagreed | the shift happens once where the message is recorded, so columns count from 1 everywhere. The recorded output is unchanged — it was already 1-based |
+| a program whose scope and type messages came out in another order counted as a failure, though the assignment fixes no order between the two passes | the runner compares which messages come out, not their order: the same messages in another order print `ORDER` and pass |
 
 ## Adding your own tests
 
