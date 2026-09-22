@@ -1,0 +1,26 @@
+(* "write" takes strings and any value that is not an array, in any mixture,
+   joined by "&". *)
+program writing
+
+define value() -> boolean
+begin
+    exit true
+end
+
+begin
+    integer i;
+    boolean b;
+    integer array a;
+
+    i <- 1;
+    b <- false;
+    a <- array 2;
+    a[0] <- 2;
+
+    write "one item";
+    write i;
+    write b;
+    write "i is " & i & ", b is " & b;
+    write a[0] & " and " & a[1];
+    write value() & (i < 2) & -i
+end

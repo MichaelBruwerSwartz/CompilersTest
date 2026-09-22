@@ -1,0 +1,4 @@
+line 14:12 incompatible types (expected boolean, found integer) for operator 'and'
+line 15:12 incompatible types (expected boolean, found integer) for operator 'and'
+line 16:12 incompatible types (expected boolean, found integer) for operator 'and'
+line 17:12 'and' is an illegal array operation

@@ -1,0 +1,25 @@
+(* An undeclared name is reported at every occurrence, at whatever depth it
+   stands. *)
+program depths
+
+define outer()
+begin
+    define inner()
+    begin
+        define innermost()
+        begin
+            ghost <- 3
+        end
+
+        ghost <- 2;
+        innermost()
+    end
+
+    ghost <- 1;
+    inner()
+end
+
+begin
+    ghost <- 4;
+    outer()
+end

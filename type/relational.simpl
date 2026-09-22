@@ -1,0 +1,18 @@
+(* The ordering operators compare integers; "=" and "#" compare two scalars of
+   the same type. *)
+program relations
+begin
+    integer i;
+    boolean b;
+    integer array a;
+
+    b <- i < b;
+    b <- b > i;
+    b <- b <= b;
+    b <- i = b;
+    b <- b # i;
+    b <- a = a;
+    b <- i # a;
+    b <- i = i;
+    b <- b # b
+end

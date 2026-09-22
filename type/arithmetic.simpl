@@ -1,0 +1,15 @@
+(* "+", "-", "*", "/", "mod" and unary "-" take integer operands. *)
+program arithmetic
+begin
+    integer i;
+    boolean b;
+    integer array a;
+
+    i <- b + 1;
+    i <- 1 - b;
+    i <- b * b;
+    i <- 1 / b;
+    i <- b mod 1;
+    i <- -b;
+    i <- a + 1
+end

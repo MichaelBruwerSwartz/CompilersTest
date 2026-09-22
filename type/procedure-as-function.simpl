@@ -1,0 +1,16 @@
+(* A procedure yields nothing, so a call to one is not an expression. *)
+program using
+
+define procedure(integer n)
+begin
+    chill
+end
+
+begin
+    integer i;
+    boolean b;
+
+    i <- procedure(1);
+    b <- procedure(1) = true;
+    write procedure(1)
+end

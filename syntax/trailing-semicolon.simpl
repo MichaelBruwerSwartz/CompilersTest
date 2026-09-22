@@ -1,0 +1,9 @@
+(* ";" separates statements rather than ending them, so none may stand before
+   the "end". *)
+program trailing
+
+begin
+    integer i;
+
+    i <- 1;
+end

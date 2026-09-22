@@ -1,0 +1,11 @@
+(* Every use of an undeclared identifier is reported, not just the first. *)
+program undeclared
+begin
+    integer known;
+    known <- missing;
+    known <- missing + missing;
+    missing <- 1;
+    read missing;
+    write missing;
+    missing(1)
+end

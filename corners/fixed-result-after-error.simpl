@@ -1,0 +1,17 @@
+(* An operator whose result type is fixed whatever its operands returns it even
+   after an error, so the operand is reported and the guard above it is not. *)
+program fixed
+
+begin
+    boolean b;
+
+    b <- true;
+
+    if (b + 1) < 2 then
+        chill
+    end;
+
+    while not (1 + b) do
+        chill
+    end
+end

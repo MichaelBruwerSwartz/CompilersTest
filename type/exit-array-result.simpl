@@ -1,0 +1,37 @@
+(* A function declared to yield an array is exited with one whole, and a
+   function declared to yield a scalar is not. *)
+program returning
+
+integer array global;
+
+define whole() -> integer array
+begin
+    exit global
+end
+
+define wrongElement() -> integer array
+begin
+    exit global[0]
+end
+
+define wrongArray() -> integer
+begin
+    exit global
+end
+
+define wrongKind() -> boolean array
+begin
+    exit global
+end
+
+begin
+    boolean array flags;
+
+    global <- array 2;
+    flags <- array 2;
+
+    global <- whole();
+    global <- wrongElement();
+    flags <- wrongKind();
+    write wrongArray()
+end

@@ -1,0 +1,14 @@
+(* An allocation names the array itself; an indexed one is an element, and no
+   element is an array. *)
+program indexed
+
+integer array a;
+boolean array c;
+
+begin
+    a <- array 2;
+    c <- array 2;
+
+    a[0] <- array 2;
+    c[1] <- array 2
+end

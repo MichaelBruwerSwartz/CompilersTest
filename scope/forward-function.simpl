@@ -1,0 +1,17 @@
+(* No forward references: a function may call itself, but not one declared
+   after it, so mutual recursion is out of reach. *)
+program forward
+
+define a() -> integer
+begin
+    exit b()
+end
+
+define b() -> integer
+begin
+    exit a()
+end
+
+begin
+    write a()
+end

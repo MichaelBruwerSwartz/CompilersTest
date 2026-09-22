@@ -1,0 +1,31 @@
+(* Functions within functions, three deep. Each level sees the names of the
+   levels enclosing it. *)
+program nesting
+
+integer depth;
+
+define outer(integer a) -> integer
+begin
+    integer outerLocal;
+
+    define middle(integer b) -> integer
+    begin
+        integer middleLocal;
+
+        define inner(integer c) -> integer
+        begin
+            exit a + b + c + depth + outerLocal + middleLocal
+        end
+
+        middleLocal <- b;
+        exit inner(b)
+    end
+
+    outerLocal <- a;
+    exit middle(a)
+end
+
+begin
+    depth <- 1;
+    write outer(2)
+end

@@ -1,0 +1,4 @@
+line 7:10 an exit expression is not allowed for a procedure
+line 12:5 missing exit expression for a function
+line 17:10 incompatible types (expected integer, found boolean) for 'exit' statement
+line 26:10 an exit expression is not allowed for a procedure

@@ -1,0 +1,21 @@
+(* A recursive function taking an array: the array passes down whole at every
+   level, and the result is a scalar drawn from it. *)
+program recursing
+
+define total(integer array values, integer n) -> integer
+begin
+    if n = 0 then
+        exit 0
+    end;
+    exit values[n - 1] + total(values, n - 1)
+end
+
+begin
+    integer array numbers;
+
+    numbers <- array 3;
+    numbers[0] <- 1;
+    numbers[1] <- 2;
+    numbers[2] <- 3;
+    write total(numbers, 3)
+end

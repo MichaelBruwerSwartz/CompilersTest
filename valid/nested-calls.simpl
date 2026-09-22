@@ -1,0 +1,24 @@
+(* A call is an expression, so calls nest inside arguments, inside indices and
+   inside guards. *)
+program nesting
+
+integer array table;
+
+define twice(integer n) -> integer
+begin
+    exit 2 * n
+end
+
+define pick(integer n) -> integer
+begin
+    exit table[twice(n)]
+end
+
+begin
+    table <- array 8;
+    table[0] <- 1;
+
+    if twice(pick(twice(1))) > 0 then
+        write pick(twice(0))
+    end
+end

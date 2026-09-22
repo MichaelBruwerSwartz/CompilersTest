@@ -1,0 +1,4 @@
+line 6:11 token recognition error at: '"bad: \q'
+line 6:19 token recognition error at: '";\n'
+line 7:5 mismatched input 'write' expecting {'true', 'false', 'not', '(', '-', ID, NUM, STRING}
+line 7:11 token recognition error at: '"trailing: \"\n'

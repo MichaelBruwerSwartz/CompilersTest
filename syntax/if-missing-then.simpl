@@ -1,0 +1,11 @@
+(* The guard of an "if" is followed by "then". *)
+program guarding
+
+begin
+    boolean b;
+
+    b <- true;
+    if b
+        chill
+    end
+end

@@ -1,0 +1,16 @@
+(* A statement holding a violation does not end the pass: the statements after
+   it are walked too, inside every kind of nesting. *)
+program continuing
+
+begin
+    first <- 1;
+    if second then
+        third <- 2;
+        while fourth do
+            fifth <- 3
+        end
+    else
+        sixth <- 4
+    end;
+    seventh <- 5
+end

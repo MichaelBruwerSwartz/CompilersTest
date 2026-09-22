@@ -1,0 +1,3 @@
+line 18:10 expected scalar variable instead of 'a'
+line 19:10 'f' is not a variable
+line 20:10 'reading' is not a variable

@@ -1,0 +1,6 @@
+line 9:10 unknown identifier 'one'
+line 9:16 unknown identifier 'two'
+line 9:23 unknown identifier 'three'
+line 9:31 unknown identifier 'four'
+line 10:14 unknown identifier 'five'
+line 10:21 unknown identifier 'six'

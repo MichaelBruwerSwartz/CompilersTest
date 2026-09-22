@@ -1,0 +1,16 @@
+(* Two functions of the same name in one scope collide. *)
+program twice
+
+define f()
+begin
+    chill
+end
+
+define f(integer n)
+begin
+    chill
+end
+
+begin
+    chill
+end

@@ -1,0 +1,18 @@
+(* Several violations on one line, to see the order they are printed in when
+   the line is the same and only the column differs. The last line is not
+   indented, so its first message pins the first character of a line as
+   column 1 rather than column 0. *)
+program crowded
+
+integer array a;
+
+begin
+    boolean b;
+    integer i;
+
+    a <- array 2;
+    b <- true;
+
+    i <- b + b; i <- b * b; i <- b - b;
+ghost <- 1; other <- 2; third <- 3
+end

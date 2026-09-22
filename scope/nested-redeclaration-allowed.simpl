@@ -1,0 +1,22 @@
+(* "No redeclaration" is a rule about one scope. The same name in a scope
+   nested inside another is a new declaration, not a second one. *)
+program nesting
+
+integer x;
+
+define f(integer x)
+begin
+    define g()
+    begin
+        boolean x;
+
+        x <- true
+    end
+
+    g()
+end
+
+begin
+    x <- 1;
+    f(x)
+end

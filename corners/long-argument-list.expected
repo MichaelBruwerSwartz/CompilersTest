@@ -1,0 +1,2 @@
+line 13:42 incompatible types (expected integer, found boolean) for parameter 10 of call to 'ten'
+line 14:40 too few arguments for call to 'ten'

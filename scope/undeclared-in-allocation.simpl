@@ -1,0 +1,11 @@
+(* Both sides of an "array" allocation are walked: the variable allocated for
+   and the size. *)
+program allocating
+
+integer array a;
+
+begin
+    a <- array ghost;
+    other <- array 4;
+    third <- array fourth
+end

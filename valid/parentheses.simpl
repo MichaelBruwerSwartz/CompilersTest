@@ -1,0 +1,12 @@
+(* Parentheses reopen an <expr> inside a <factor>, so a comparison may be
+   nested inside an arithmetic one and a leading minus may be repeated. *)
+program grouping
+
+begin
+    integer i;
+    boolean b;
+
+    i <- -(-(3 + 4)) * (2 - 1);
+    b <- (1 < 2) = (3 < 4);
+    b <- not (not (true))
+end

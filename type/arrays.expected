@@ -1,0 +1,8 @@
+line 20:12 '+' is an illegal array operation
+line 21:12 '*' is an illegal array operation
+line 22:10 unary minus is an illegal array operation
+line 23:12 '=' is an illegal array operation
+line 24:12 '<' is an illegal array operation
+line 25:10 'not' is an illegal array operation
+line 26:11 'write' is an illegal array operation
+line 28:15 incompatible types (expected integer array, found boolean array) for parameter 1 of call to 'take'

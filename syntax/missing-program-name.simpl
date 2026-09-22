@@ -1,0 +1,6 @@
+(* The "program" keyword is followed by an identifier. *)
+program
+
+begin
+    chill
+end

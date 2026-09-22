@@ -1,0 +1,6 @@
+line 7:12 incompatible types (expected boolean, found integer) for operator 'and'
+line 8:15 incompatible types (expected boolean, found integer) for operator 'and'
+line 9:12 incompatible types (expected boolean, found integer) for operator 'or'
+line 10:12 incompatible types (expected boolean, found integer) for operator 'or'
+line 11:14 incompatible types (expected boolean, found integer) for 'not'
+line 12:18 incompatible types (expected boolean, found integer) for 'not'

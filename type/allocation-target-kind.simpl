@@ -1,0 +1,16 @@
+(* Only an array variable may be allocated for. *)
+program targets
+
+define f() -> integer
+begin
+    exit 1
+end
+
+begin
+    integer i;
+    boolean b;
+
+    i <- array 2;
+    b <- array 2;
+    f <- array 2
+end

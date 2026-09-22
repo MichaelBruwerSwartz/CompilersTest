@@ -1,0 +1,14 @@
+line 39:14 too few arguments for call to 'one'
+line 40:15 too many arguments for call to 'one'
+line 41:14 incompatible types (expected integer, found boolean) for parameter 1 of call to 'one'
+line 42:14 incompatible types (expected boolean, found integer) for parameter 1 of call to 'two'
+line 43:20 incompatible types (expected integer array, found integer) for parameter 2 of call to 'two'
+line 44:10 'none' is not a function
+line 45:5 'one' is not a procedure
+line 47:5 'numbers' is not a procedure
+line 48:5 'calls' is not a procedure
+line 49:10 'numbers' is not a function
+line 51:5 procedure 'none' takes no arguments
+line 52:10 function 'zero' takes no arguments
+line 53:11 too few arguments for call to 'pair'
+line 54:17 too many arguments for call to 'pair'

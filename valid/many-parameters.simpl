@@ -1,0 +1,20 @@
+(* Parameters of every type, in quantity, each used at its own type. *)
+program parameters
+
+define mix(integer i, boolean b, integer array ia, boolean array ba,
+           integer j, boolean c) -> integer
+begin
+    if b and c then
+        chill
+    end;
+    exit i + j + ia[0] + ia[i]
+end
+
+begin
+    integer array numbers;
+    boolean array flags;
+
+    numbers <- array 4;
+    flags <- array 4;
+    write mix(1, true, numbers, flags, 2, false)
+end

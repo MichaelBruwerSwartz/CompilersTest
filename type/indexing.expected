@@ -1,0 +1,9 @@
+line 16:12 incompatible types (expected integer, found boolean) for array index of 'a'
+line 17:12 incompatible types (expected integer, found integer array) for array index of 'a'
+line 18:10 'i' is not an array
+line 19:10 'b' is not an array
+line 20:10 'f' is not an array
+line 21:7 incompatible types (expected integer, found boolean) for array index of 'a'
+line 22:5 'i' is not an array
+line 23:10 'i' is not an array
+line 24:10 'f' is not a variable

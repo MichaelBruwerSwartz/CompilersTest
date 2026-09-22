@@ -1,0 +1,4 @@
+line 11:10 incompatible types (expected boolean, found integer) for assignment to 'b'
+line 12:10 incompatible types (expected boolean, found integer) for assignment to 'b'
+line 13:18 incompatible types (expected boolean, found integer) for operator 'and'
+line 14:8 incompatible types (expected boolean, found integer) for 'if' guard

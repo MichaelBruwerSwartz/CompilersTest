@@ -1,0 +1,11 @@
+(* A call names something, whether it stands as a statement or inside an
+   expression. *)
+program calls
+
+begin
+    integer i;
+
+    ghost();
+    i <- other();
+    third(1, 2)
+end

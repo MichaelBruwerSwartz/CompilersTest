@@ -1,0 +1,4 @@
+line 13:14 incompatible types (expected boolean, found integer) for 'not'
+line 14:14 incompatible types (expected boolean, found integer) for 'not'
+line 15:10 'not' is an illegal array operation
+line 16:14 incompatible types (expected boolean, found integer) for 'not'

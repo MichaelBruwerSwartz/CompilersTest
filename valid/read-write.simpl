@@ -1,0 +1,15 @@
+(* read into a scalar variable and into an array element; write strings and
+   scalar expressions. *)
+program io
+
+integer n;
+boolean b;
+integer array a;
+
+begin
+    a <- array 3;
+    read n;
+    read b;
+    read a[1];
+    write "n = " & n & ", b = " & b & ", a[1] = " & a[1]
+end

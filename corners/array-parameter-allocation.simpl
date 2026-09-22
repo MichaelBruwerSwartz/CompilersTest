@@ -1,0 +1,17 @@
+(* An array parameter arrives already allocated. Allocating for it again is
+   not forbidden by any rule in chapter 5, so it should draw nothing. *)
+program reallocating
+
+define grow(integer array values, integer n) -> integer array
+begin
+    values <- array n;
+    exit values
+end
+
+begin
+    integer array numbers;
+
+    numbers <- array 2;
+    numbers <- grow(numbers, 8);
+    write numbers[0]
+end

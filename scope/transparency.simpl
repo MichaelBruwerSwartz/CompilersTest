@@ -1,0 +1,32 @@
+(* Lookup that finds nothing in one scope keeps walking outwards, so the
+   innermost body reaches names from every level above it. *)
+program transparent
+
+integer fromProgram;
+
+define outer(integer fromOuter)
+begin
+    integer fromOuterBody;
+
+    define middle(integer fromMiddle)
+    begin
+        integer fromMiddleBody;
+
+        define inner() -> integer
+        begin
+            exit fromProgram + fromOuter + fromOuterBody
+                 + fromMiddle + fromMiddleBody
+        end
+
+        fromMiddleBody <- fromMiddle;
+        write inner()
+    end
+
+    fromOuterBody <- fromOuter;
+    middle(2)
+end
+
+begin
+    fromProgram <- 1;
+    outer(1)
+end

@@ -1,0 +1,21 @@
+(* "array" allocates for an array variable, and takes an integer size. *)
+program allocation
+
+integer array a;
+integer i;
+boolean b;
+
+define f()
+begin
+    chill
+end
+
+begin
+    a <- array 2;
+    a <- array b;
+    a[0] <- array 2;
+    i <- array 2;
+    b <- array 2;
+    f <- array 2;
+    allocation <- array 2
+end

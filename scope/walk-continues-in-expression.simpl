@@ -1,0 +1,11 @@
+(* The walk always descends into sub-expressions, so every undeclared name in
+   one expression is reported, not just the first. *)
+program persistent
+
+begin
+    integer i;
+    boolean b;
+
+    i <- one + two * (three - four);
+    b <- not five = six
+end

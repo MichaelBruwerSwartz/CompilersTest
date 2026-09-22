@@ -1,0 +1,22 @@
+(* Sameness of type is not enough: a whole array reaches no operator, equality
+   among them. *)
+program comparing
+
+integer array a, b;
+boolean array c;
+
+begin
+    a <- array 2;
+    b <- array 2;
+    c <- array 2;
+
+    if a = b then
+        chill
+    end;
+    if a # b then
+        chill
+    end;
+    if a = c then
+        chill
+    end
+end

@@ -1,0 +1,25 @@
+(* Transparency: a global is reachable from the innermost body, through every
+   scope between. *)
+program reaching
+
+integer counter;
+integer array log;
+
+define outer()
+begin
+    define inner()
+    begin
+        counter <- counter + 1;
+        log[counter] <- counter
+    end
+
+    inner();
+    inner()
+end
+
+begin
+    counter <- 0;
+    log <- array 8;
+    outer();
+    write log[counter]
+end

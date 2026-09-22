@@ -1,0 +1,2 @@
+line 10:11 incompatible types (expected integer, found boolean) for operator '+'
+line 14:18 incompatible types (expected integer, found boolean) for operator '+'

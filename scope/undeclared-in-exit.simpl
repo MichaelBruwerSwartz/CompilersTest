@@ -1,0 +1,16 @@
+(* The expression carried by an "exit" is walked. *)
+program exiting
+
+define f() -> integer
+begin
+    exit ghost
+end
+
+define g() -> integer
+begin
+    exit ghost + other
+end
+
+begin
+    write f() + g()
+end

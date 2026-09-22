@@ -1,0 +1,24 @@
+(* A leading "-" negates the term after it, at the front of a <simple> and
+   nowhere else; parentheses reopen the chance. *)
+program negation
+
+define value() -> integer
+begin
+    exit -1
+end
+
+begin
+    integer i, j;
+    integer array a;
+
+    a <- array 2;
+    a[0] <- 1;
+    i <- 1;
+
+    j <- -i;
+    j <- -i + 2;
+    j <- -(i + 2);
+    j <- -a[0];
+    j <- -value();
+    j <- 3 * (-i)
+end

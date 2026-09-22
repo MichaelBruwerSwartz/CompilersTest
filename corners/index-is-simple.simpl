@@ -1,0 +1,13 @@
+(* Part 1: <index> holds a <simple>, not an <expr>, so an index may carry the
+   additive operators but not a relational one. The second is a syntax error. *)
+program indexing
+
+begin
+    integer i;
+    integer array a;
+
+    a <- array 4;
+    i <- 0;
+    i <- a[i + 1];
+    i <- a[i < 2]
+end

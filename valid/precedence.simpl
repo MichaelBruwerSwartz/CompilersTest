@@ -1,0 +1,13 @@
+(* The three expression levels bind as the grammar nests them: mulop tightest,
+   then addop, then the single relop. *)
+program precedence
+
+begin
+    integer i;
+    boolean b;
+
+    i <- 1 + 2 * 3 mod 4 - 6 / 2;
+    b <- 1 + 2 < 3 * 4;
+    b <- true or false and true;
+    b <- not true and false
+end

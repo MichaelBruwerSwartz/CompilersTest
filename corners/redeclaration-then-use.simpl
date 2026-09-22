@@ -1,0 +1,23 @@
+(* After a collision the scope holds one entry. Which declaration the later
+   uses are typed against is not something the assignment fixes. *)
+program winner
+
+integer x;
+boolean x;
+
+define f() -> integer
+begin
+    exit 1
+end
+
+define f() -> boolean
+begin
+    exit true
+end
+
+begin
+    integer i;
+
+    i <- x;
+    i <- f()
+end

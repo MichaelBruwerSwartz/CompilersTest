@@ -1,0 +1,8 @@
+(* A closed comment may be the last thing in the file, with no newline after
+   it. *)
+program trailing
+
+begin
+    chill
+end
+(* the end *)

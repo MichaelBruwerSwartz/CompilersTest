@@ -1,0 +1,57 @@
+(* A call must name a function, and supply arguments matching its parameters.
+   A function's result may not be discarded; a procedure has none to use. *)
+program calls
+
+integer array numbers;
+
+define none()
+begin
+    chill
+end
+
+define zero() -> integer
+begin
+    exit 0
+end
+
+define one(integer n) -> integer
+begin
+    exit n
+end
+
+define two(boolean flag, integer array values) -> boolean
+begin
+    exit flag
+end
+
+(* a procedure counts its arguments the same way a function does *)
+define pair(integer n, boolean flag)
+begin
+    chill
+end
+
+begin
+    integer i;
+    boolean b;
+
+    numbers <- array 2;
+
+    i <- one();
+    i <- one(1, 2);
+    i <- one(true);
+    b <- two(1, numbers);
+    b <- two(true, i);
+    i <- none();
+    one(1);
+    none();
+    numbers(1);
+    calls();
+    i <- numbers(0);
+    i <- one(one(1));
+    none(1);
+    i <- zero(1);
+    pair(1);
+    pair(1, true, 2);
+    pair(1, true);
+    i <- zero()
+end

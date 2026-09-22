@@ -1,0 +1,29 @@
+(* The guard of "if", "elsif" and "while" must be boolean. *)
+program guards
+
+integer array a;
+
+begin
+    integer i;
+    boolean b;
+
+    a <- array 2;
+
+    if i then
+        chill
+    elsif a[0] then
+        chill
+    elsif b then
+        chill
+    else
+        chill
+    end;
+
+    while i + 1 do
+        chill
+    end;
+
+    while a do
+        chill
+    end
+end

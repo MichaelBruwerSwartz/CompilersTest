@@ -1,0 +1,2 @@
+line 5:11 token recognition error at: '"no closing quote\n'
+line 6:1 mismatched input 'end' expecting {'true', 'false', 'not', '(', '-', ID, NUM, STRING}

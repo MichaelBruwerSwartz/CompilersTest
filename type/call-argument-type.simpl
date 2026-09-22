@@ -1,0 +1,15 @@
+(* Each argument is checked against its own parameter, and the message names
+   the position. *)
+program arguments
+
+define three(integer a, boolean b, integer c)
+begin
+    chill
+end
+
+begin
+    three(true, true, 1);
+    three(1, 2, 3);
+    three(1, true, false);
+    three(1, true, 3)
+end

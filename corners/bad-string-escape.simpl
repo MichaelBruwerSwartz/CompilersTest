@@ -1,0 +1,8 @@
+(* The escapes are \" \\ \n and \t; anything else after a backslash is not
+   one of them. *)
+program escapes
+
+begin
+    write "bad: \q";
+    write "trailing: \"
+end

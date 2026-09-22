@@ -1,0 +1,18 @@
+(* "or" takes two booleans and yields one. *)
+program disjunction
+
+boolean array c;
+
+begin
+    boolean b;
+    integer i;
+
+    c <- array 2;
+    b <- false;
+    i <- 1;
+
+    b <- i or b;
+    b <- b or i;
+    b <- c or b;
+    b <- b or c
+end

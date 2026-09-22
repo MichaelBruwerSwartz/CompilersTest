@@ -1,0 +1,7 @@
+line 9:12 incompatible types (expected integer, found boolean) for operator '<'
+line 10:12 incompatible types (expected integer, found boolean) for operator '>'
+line 11:12 incompatible types (expected integer, found boolean) for operator '<='
+line 12:12 incompatible types (expected integer, found boolean) for operator '='
+line 13:12 incompatible types (expected boolean, found integer) for operator '#'
+line 14:12 '=' is an illegal array operation
+line 15:12 '#' is an illegal array operation

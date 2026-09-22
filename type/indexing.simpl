@@ -1,0 +1,25 @@
+(* Only an array can be indexed, and only by an integer. *)
+program indexing
+
+define f() -> integer
+begin
+    exit 1
+end
+
+begin
+    integer i;
+    boolean b;
+    integer array a;
+
+    a <- array 2;
+
+    i <- a[b];
+    i <- a[a];
+    i <- i[0];
+    i <- b[0];
+    i <- f[0];
+    a[b] <- 1;
+    i[0] <- 1;
+    read i[0];
+    read f
+end

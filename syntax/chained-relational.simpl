@@ -1,0 +1,12 @@
+(* An <expr> carries at most one <relop>, so comparisons do not chain. *)
+program chaining
+
+begin
+    boolean b;
+    integer i, j, k;
+
+    i <- 1;
+    j <- 2;
+    k <- 3;
+    b <- i < j < k
+end

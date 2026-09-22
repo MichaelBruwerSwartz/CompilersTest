@@ -1,0 +1,11 @@
+(* A string carries the four escapes and the printable ASCII range. *)
+program strings
+
+begin
+    write "tab:\there";
+    write "newline:\nhere";
+    write "quote:\"here\"";
+    write "backslash:\\here";
+    write "!#$%&'()*+,-./0123456789:;<=>?@[]^_`{|}~";
+    write ""
+end

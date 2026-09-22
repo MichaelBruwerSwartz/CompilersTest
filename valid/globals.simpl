@@ -1,0 +1,18 @@
+(* Top-level variable declarations preceding the top-level body, and visible
+   inside a function declared after them. *)
+program globals
+
+integer counter;
+boolean array seen;
+
+define bump()
+begin
+    counter <- counter + 1
+end
+
+begin
+    counter <- 0;
+    seen <- array 8;
+    bump();
+    write counter
+end

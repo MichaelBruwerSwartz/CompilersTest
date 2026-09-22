@@ -1,0 +1,22 @@
+(* No type error is reported for an undeclared identifier, however
+   inconsistently it is used, so every message below but the last two is a
+   scope error. Those two are not about 'ghost' either: an unknown left operand
+   lets "+" through to blame its right one, and the program body returns nothing
+   whatever the value would have been. *)
+program silent
+begin
+    integer i;
+    boolean b;
+
+    i <- ghost;
+    b <- ghost;
+    i <- ghost[0];
+    i <- ghost(1, 2);
+    ghost <- true;
+    ghost[0] <- 1;
+    ghost <- array 2;
+    read ghost;
+    write ghost;
+    i <- ghost + true;
+    exit ghost
+end

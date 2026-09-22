@@ -1,0 +1,37 @@
+(* Allocation, indexing, reading into an element, and the two places a whole
+   array may stand: either side of an assignment between variables of its own
+   type, and an argument or result of its own type. *)
+program arrays
+
+integer array numbers;
+integer array copy;
+boolean array flags;
+
+define echo(integer array values) -> integer array
+begin
+    exit values
+end
+
+define total(integer array values, integer count) -> integer
+begin
+    integer i, sum;
+    i <- 0;
+    sum <- 0;
+    while i < count do
+        sum <- sum + values[i];
+        i <- i + 1
+    end;
+    exit sum
+end
+
+begin
+    numbers <- array 4;
+    flags <- array 4;
+    numbers[0] <- 10;
+    numbers[1 + 1] <- 20;
+    flags[3] <- not flags[0];
+    read numbers[1];
+    copy <- numbers;
+    copy <- echo(numbers);
+    write total(copy, 4)
+end

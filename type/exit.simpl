@@ -1,0 +1,27 @@
+(* A function exits with a value of its result type; the program body and a
+   procedure exit without one. *)
+program exits
+
+define procedure()
+begin
+    exit 1
+end
+
+define answer() -> integer
+begin
+    exit
+end
+
+define wrong() -> integer
+begin
+    exit true
+end
+
+define right() -> boolean
+begin
+    exit false
+end
+
+begin
+    exit 1
+end

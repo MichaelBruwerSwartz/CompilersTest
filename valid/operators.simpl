@@ -1,0 +1,24 @@
+(* Every operator applied to operands of the type it requires. *)
+program operators
+
+begin
+    integer i, j;
+    boolean b, c;
+
+    i <- 1 + 2 - 3;
+    i <- -i;
+    i <- i * j / 2 mod 3;
+    b <- true and false;
+    b <- b or c;
+    b <- not b;
+    b <- i = j;
+    b <- i # j;
+    b <- i < j;
+    b <- i <= j;
+    b <- i > j;
+    b <- i >= j;
+    b <- b = c;
+    b <- b # c;
+    b <- (i + 1) * 2 = j;
+    write i & " " & b
+end

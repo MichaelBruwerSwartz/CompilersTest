@@ -1,0 +1,3 @@
+line 14:10 incompatible types (expected integer array, found integer) for 'exit' statement
+line 19:10 incompatible types (expected integer, found integer array) for 'exit' statement
+line 24:10 incompatible types (expected boolean array, found integer array) for 'exit' statement

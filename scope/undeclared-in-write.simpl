@@ -1,0 +1,7 @@
+(* Every item of a "write" is walked; the strings between them are not names. *)
+program writing
+
+begin
+    write ghost;
+    write "text" & other & "more" & third
+end

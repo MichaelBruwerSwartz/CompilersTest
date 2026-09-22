@@ -1,0 +1,15 @@
+(* The size of an allocation is an integer. *)
+program sizes
+
+integer array a;
+boolean array c;
+
+begin
+    boolean b;
+
+    b <- true;
+
+    a <- array b;
+    c <- array (1 < 2);
+    a <- array 2 + 2
+end

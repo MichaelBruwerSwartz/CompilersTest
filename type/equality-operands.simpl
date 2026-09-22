@@ -1,0 +1,16 @@
+(* "=" and "#" take two operands of the same type, whichever type that is. *)
+program equality
+
+begin
+    boolean b;
+    integer i;
+
+    b <- true;
+    i <- 1;
+
+    b <- i = b;
+    b <- b = i;
+    b <- i # b;
+    b <- b # i;
+    b <- (i < 1) = i
+end

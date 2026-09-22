@@ -1,0 +1,26 @@
+(* One undeclared name in every position a name can hold. The type pass should
+   say nothing about any of them. *)
+program positions
+
+integer array a;
+
+begin
+    integer i;
+
+    a <- array 2;
+
+    ghost <- 1;
+    ghost[0] <- 1;
+    ghost <- array 2;
+    i <- ghost;
+    i <- ghost[0];
+    i <- ghost(1);
+    i <- a[ghost];
+    i <- ghost + ghost[0] * ghost(2);
+    ghost();
+    read ghost;
+    write ghost;
+    if ghost then
+        chill
+    end
+end

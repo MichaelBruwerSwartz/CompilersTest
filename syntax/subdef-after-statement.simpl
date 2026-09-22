@@ -1,0 +1,9 @@
+(* A nested function declaration may not follow a statement either. *)
+program lateFunction
+begin
+    write "start";
+    define f()
+    begin
+        chill
+    end
+end

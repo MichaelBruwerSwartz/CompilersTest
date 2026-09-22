@@ -1,0 +1,14 @@
+(* An index is an expression, so an array may be indexed by itself, to any
+   depth. A second index on the same name is a syntax error, which
+   index-is-simple.simpl holds. *)
+program chained
+
+integer array a;
+
+begin
+    integer i;
+
+    a <- array 4;
+    i <- a[a[a[0]]];
+    i <- a[a[a[a[i]]]] + a[i + a[i]]
+end

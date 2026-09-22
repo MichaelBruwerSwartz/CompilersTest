@@ -1,0 +1,22 @@
+(* "read" fills a scalar variable: not a whole array, not a function, not the
+   program. *)
+program reading
+
+integer array a;
+
+define f() -> integer
+begin
+    exit 1
+end
+
+begin
+    integer i;
+
+    a <- array 2;
+
+    read i;
+    read a;
+    read f;
+    read reading;
+    read a[0]
+end

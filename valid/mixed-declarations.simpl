@@ -1,0 +1,37 @@
+(* Variable and function declarations mixed arbitrarily, at the top level and
+   inside a body. *)
+program mixed
+
+integer first;
+
+define one() -> integer
+begin
+    exit 1
+end
+
+boolean second;
+
+define two() -> integer
+begin
+    exit one() + one()
+end
+
+integer third;
+
+begin
+    integer local;
+
+    define thrice(integer n) -> integer
+    begin
+        exit 3 * n
+    end
+
+    boolean flag;
+
+    first <- one();
+    second <- true;
+    third <- two();
+    local <- thrice(first + third);
+    flag <- second;
+    write local
+end

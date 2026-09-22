@@ -1,0 +1,11 @@
+(* The guard of a "while" is followed by "do". *)
+program looping
+
+begin
+    boolean b;
+
+    b <- false;
+    while b
+        chill
+    end
+end

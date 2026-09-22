@@ -1,0 +1,19 @@
+(* An index is an integer, wherever the indexed name stands. *)
+program indices
+
+integer array a;
+
+begin
+    integer i;
+    boolean b;
+
+    a <- array 4;
+    b <- true;
+    i <- 0;
+
+    i <- a[b];
+    a[b] <- 1;
+    read a[b];
+    i <- a[i + 1];
+    i <- a[a[i]]
+end

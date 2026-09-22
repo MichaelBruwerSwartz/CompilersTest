@@ -1,0 +1,10 @@
+(* Lexer: an identifier runs to 32 characters. The first is 32 long and the
+   second is 33. *)
+program identifiers
+
+begin
+    integer abcdefghijklmnopqrstuvwxyz012345;
+    integer abcdefghijklmnopqrstuvwxyz0123456;
+
+    abcdefghijklmnopqrstuvwxyz012345 <- 1
+end

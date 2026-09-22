@@ -1,0 +1,20 @@
+(* A subroutine with no parameters is declared and called with an empty list,
+   as a statement and inside an expression. *)
+program empty
+
+define tick()
+begin
+    chill
+end
+
+define value() -> integer
+begin
+    exit 7
+end
+
+begin
+    integer i;
+
+    tick();
+    i <- value()
+end

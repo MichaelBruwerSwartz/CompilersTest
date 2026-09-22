@@ -1,0 +1,2 @@
+line 12:13 incompatible types (expected integer, found integer array) for allocation to indexed array 'a'
+line 13:13 incompatible types (expected boolean, found boolean array) for allocation to indexed array 'c'

@@ -1,0 +1,21 @@
+(* Messages are sorted rather than printed as they are found, into one source
+   order whatever pass found them. The two passes alternate line by line here,
+   so grouping by pass shows up as the list jumping backwards. The exit in
+   'quiet' draws one of each on the very same token: scope keeps precedence. *)
+program ordering
+
+integer i;
+boolean b;
+
+define quiet()
+begin
+    exit ghost
+end
+
+begin
+    i <- b;
+    ghost <- 1;
+    b <- i;
+    other <- 2;
+    i <- true
+end

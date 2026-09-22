@@ -1,0 +1,21 @@
+(* The value carried out of a function is of its declared result type. *)
+program exiting
+
+define number() -> integer
+begin
+    exit true
+end
+
+define flag() -> boolean
+begin
+    exit 1
+end
+
+define comparison() -> boolean
+begin
+    exit 1 < 2
+end
+
+begin
+    write number() & flag() & comparison()
+end

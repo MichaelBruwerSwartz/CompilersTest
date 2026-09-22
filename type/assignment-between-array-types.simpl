@@ -1,0 +1,15 @@
+(* A whole array assigns only to a variable of its own type. *)
+program arrays
+
+integer array ia, ja;
+boolean array ba;
+
+begin
+    ia <- array 2;
+    ja <- array 2;
+    ba <- array 2;
+
+    ia <- ja;
+    ia <- ba;
+    ba <- ia
+end

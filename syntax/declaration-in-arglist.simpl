@@ -1,0 +1,9 @@
+(* A parameter list takes a type before every name, and nothing else. *)
+program parameters
+define f(integer a, b)
+begin
+    chill
+end
+begin
+    chill
+end

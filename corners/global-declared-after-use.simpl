@@ -1,0 +1,15 @@
+(* Declare before use across the global list: a function cannot reach a global
+   declared after it, though the body below can reach both. *)
+program ordering
+
+define early() -> integer
+begin
+    exit late
+end
+
+integer late;
+
+begin
+    late <- 1;
+    write early()
+end

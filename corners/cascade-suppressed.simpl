@@ -1,0 +1,21 @@
+(* One mistake, one message: a construct whose own check failed yields unknown,
+   so the guard and the assignment above it are not reported again. *)
+program cascade
+
+begin
+    boolean b;
+    integer i;
+
+    b <- true;
+    i <- 1;
+
+    while b + 1 do
+        chill
+    end;
+
+    if not (i + b) then
+        chill
+    end;
+
+    i <- (i + b) + 1
+end

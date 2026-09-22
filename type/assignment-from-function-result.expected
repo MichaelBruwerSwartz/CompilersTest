@@ -1,0 +1,2 @@
+line 21:10 incompatible types (expected integer, found boolean) for assignment to 'i'
+line 22:10 incompatible types (expected boolean, found integer) for assignment to 'b'

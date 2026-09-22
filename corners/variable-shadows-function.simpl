@@ -1,0 +1,20 @@
+(* Decision 3: shadowing beats 5.2.5 -- an inner variable may hide an outer
+   function, and inside g the name is the variable. *)
+program cover
+
+define f() -> integer
+begin
+    exit 1
+end
+
+define g() -> integer
+begin
+    integer f;
+
+    f <- 2;
+    exit f
+end
+
+begin
+    write f() + g()
+end

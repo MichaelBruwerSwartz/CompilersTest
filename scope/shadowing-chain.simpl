@@ -1,0 +1,33 @@
+(* Lookup stops at the innermost declaration of a name, so three levels may
+   each hold their own and none of them is reported. *)
+program chain
+
+integer name;
+
+define outer()
+begin
+    boolean name;
+
+    define middle()
+    begin
+        integer array name;
+
+        define inner()
+        begin
+            boolean array name;
+
+            name <- array 2
+        end
+
+        name <- array 2;
+        inner()
+    end
+
+    name <- true;
+    middle()
+end
+
+begin
+    name <- 1;
+    outer()
+end

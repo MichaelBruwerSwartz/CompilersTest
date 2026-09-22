@@ -1,0 +1,15 @@
+(* A parameter hides a global of the same name for the whole of its body, so
+   the exit here carries a boolean and draws nothing. *)
+program hiding
+
+integer shared;
+
+define f(boolean shared) -> boolean
+begin
+    exit shared
+end
+
+begin
+    shared <- 1;
+    write f(true)
+end

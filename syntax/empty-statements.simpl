@@ -1,0 +1,5 @@
+(* A body holds a statement list, and the empty list is spelled "chill". *)
+program empty
+
+begin
+end

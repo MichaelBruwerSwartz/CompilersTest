@@ -1,0 +1,18 @@
+(* The scope checker must not check types: multiplying a function by an array
+   element is a type error, and the scope pass has nothing to say about it.
+   The messages below therefore all come from the type checker. *)
+program kinds
+
+integer array a;
+
+define f() -> integer
+begin
+    exit 1
+end
+
+begin
+    integer x;
+    a <- array 2;
+    x <- f * a[0];
+    exit
+end

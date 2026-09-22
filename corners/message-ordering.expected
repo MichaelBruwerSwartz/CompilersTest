@@ -1,0 +1,7 @@
+line 12:10 unknown identifier 'ghost'
+line 12:10 an exit expression is not allowed for a procedure
+line 16:10 incompatible types (expected integer, found boolean) for assignment to 'i'
+line 17:5 unknown identifier 'ghost'
+line 18:10 incompatible types (expected boolean, found integer) for assignment to 'b'
+line 19:5 unknown identifier 'other'
+line 20:10 incompatible types (expected integer, found boolean) for assignment to 'i'

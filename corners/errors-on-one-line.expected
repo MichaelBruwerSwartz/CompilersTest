@@ -1,0 +1,6 @@
+line 16:12 incompatible types (expected integer, found boolean) for operator '+'
+line 16:24 incompatible types (expected integer, found boolean) for operator '*'
+line 16:36 incompatible types (expected integer, found boolean) for operator '-'
+line 17:1 unknown identifier 'ghost'
+line 17:13 unknown identifier 'other'
+line 17:25 unknown identifier 'third'

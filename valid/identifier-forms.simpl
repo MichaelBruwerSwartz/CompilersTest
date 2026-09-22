@@ -1,0 +1,16 @@
+(* An identifier opens with a letter or an underscore, carries digits after
+   that, and runs to thirty-two characters. *)
+program identifiers
+
+begin
+    integer _leading;
+    integer with_underscores;
+    integer x123;
+    integer abcdefghijklmnopqrstuvwxyz012345;
+
+    _leading <- 1;
+    with_underscores <- 2;
+    x123 <- 3;
+    abcdefghijklmnopqrstuvwxyz012345 <- _leading + with_underscores + x123;
+    write abcdefghijklmnopqrstuvwxyz012345
+end

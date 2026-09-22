@@ -1,0 +1,17 @@
+(* Decision 4: with no forward declarations mutual recursion cannot be written.
+   The call to odd is too early; the call back to even is fine. *)
+program mutual
+
+define even(integer n) -> boolean
+begin
+    exit odd(n - 1)
+end
+
+define odd(integer n) -> boolean
+begin
+    exit even(n - 1)
+end
+
+begin
+    write even(4)
+end

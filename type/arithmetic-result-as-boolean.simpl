@@ -1,0 +1,17 @@
+(* Arithmetic yields an integer, so it may not stand where a boolean is
+   wanted. *)
+program arithmetic
+
+begin
+    boolean b;
+    integer i;
+
+    i <- 1;
+
+    b <- i + 1;
+    b <- i mod 2;
+    b <- (i * 2) and b;
+    if i - 1 then
+        chill
+    end
+end

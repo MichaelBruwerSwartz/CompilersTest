@@ -1,0 +1,4 @@
+line 12:8 incompatible types (expected boolean, found integer) for 'if' guard
+line 14:11 incompatible types (expected boolean, found integer) for 'elsif' guard
+line 22:11 incompatible types (expected boolean, found integer) for 'while' guard
+line 26:11 incompatible types (expected boolean, found integer array) for 'while' guard

@@ -1,0 +1,14 @@
+(* Decision 2, the other half: a global named after the program collides with
+   it, as does a function. *)
+program subject
+
+integer subject;
+
+define subject()
+begin
+    chill
+end
+
+begin
+    chill
+end

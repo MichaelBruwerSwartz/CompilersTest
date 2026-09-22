@@ -1,0 +1,29 @@
+(* A body nested inside a function is still one scope, and collides within
+   itself as any other does. *)
+program nested
+
+define f()
+begin
+    integer a;
+
+    define g()
+    begin
+        integer b;
+        boolean b;
+
+        define h()
+        begin
+            integer c, c;
+
+            chill
+        end
+
+        h()
+    end
+
+    g()
+end
+
+begin
+    f()
+end

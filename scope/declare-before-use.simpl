@@ -1,0 +1,23 @@
+(* A name must be declared by a textually preceding declaration. A global that
+   comes after a function is invisible inside it; so is a later local. *)
+program ordering
+
+define early()
+begin
+    late <- 1
+end
+
+integer late;
+
+begin
+    define user()
+    begin
+        afterwards <- 2
+    end
+
+    integer afterwards;
+
+    late <- 3;
+    afterwards <- 4;
+    user()
+end

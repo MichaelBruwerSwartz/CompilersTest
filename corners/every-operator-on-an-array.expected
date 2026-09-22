@@ -1,0 +1,16 @@
+line 14:12 '+' is an illegal array operation
+line 15:12 '-' is an illegal array operation
+line 16:12 '*' is an illegal array operation
+line 17:12 '/' is an illegal array operation
+line 18:12 'mod' is an illegal array operation
+line 19:10 unary minus is an illegal array operation
+line 20:15 'and' is an illegal array operation
+line 21:15 'or' is an illegal array operation
+line 22:13 'not' is an illegal array operation
+line 23:15 '=' is an illegal array operation
+line 24:15 '#' is an illegal array operation
+line 25:15 '<' is an illegal array operation
+line 26:15 '<=' is an illegal array operation
+line 27:15 '>' is an illegal array operation
+line 28:15 '>=' is an illegal array operation
+line 29:11 'write' is an illegal array operation

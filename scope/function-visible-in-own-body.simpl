@@ -1,0 +1,20 @@
+(* A function's name is declared in the enclosing scope before its own scope is
+   pushed, so it is visible inside itself and to everything after it. *)
+program visible
+
+define f(integer n) -> integer
+begin
+    if n = 0 then
+        exit 0
+    end;
+    exit f(n - 1)
+end
+
+define g(integer n) -> integer
+begin
+    exit f(n) + g(0)
+end
+
+begin
+    write f(2) + g(2)
+end

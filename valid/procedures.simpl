@@ -1,0 +1,26 @@
+(* A procedure declares no result, exits without a value, and is called as a
+   statement. *)
+program procedures
+
+integer state;
+
+define reset()
+begin
+    state <- 0
+end
+
+define bump(integer by)
+begin
+    state <- state + by;
+    if state > 10 then
+        exit
+    end;
+    state <- state + 1
+end
+
+begin
+    reset();
+    bump(2);
+    bump(20);
+    write state
+end

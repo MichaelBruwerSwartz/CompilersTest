@@ -1,0 +1,4 @@
+line 5:5 unknown identifier 'ghost'
+line 6:5 unknown identifier 'other'
+line 7:5 unknown identifier 'third'
+line 7:11 unknown identifier 'fourth'

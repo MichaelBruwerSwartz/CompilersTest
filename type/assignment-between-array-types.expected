@@ -1,0 +1,2 @@
+line 13:11 incompatible types (expected integer array, found boolean array) for assignment to 'ia'
+line 14:11 incompatible types (expected boolean array, found integer array) for assignment to 'ba'

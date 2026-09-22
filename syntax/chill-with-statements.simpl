@@ -1,0 +1,9 @@
+(* "chill" is the whole statement list or none of it; it does not join one. *)
+program chilling
+
+begin
+    integer i;
+
+    chill;
+    i <- 1
+end

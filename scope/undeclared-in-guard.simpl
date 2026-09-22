@@ -1,0 +1,14 @@
+(* The guard of every branching statement is walked. *)
+program guards
+
+begin
+    if ghost then
+        chill
+    elsif other then
+        chill
+    end;
+
+    while third do
+        chill
+    end
+end

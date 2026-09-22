@@ -1,0 +1,6 @@
+line 15:16 incompatible types (expected integer, found boolean) for array size of 'a'
+line 16:13 incompatible types (expected integer, found integer array) for allocation to indexed array 'a'
+line 17:5 'i' is not an array
+line 18:5 'b' is not an array
+line 19:5 'f' is not a variable
+line 20:5 'allocation' is not a variable

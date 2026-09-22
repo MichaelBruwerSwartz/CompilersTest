@@ -1,0 +1,11 @@
+(* "read" names a location: the variable, and the index if there is one. *)
+program reading
+
+integer array a;
+
+begin
+    a <- array 2;
+    read ghost;
+    read other[0];
+    read a[third]
+end

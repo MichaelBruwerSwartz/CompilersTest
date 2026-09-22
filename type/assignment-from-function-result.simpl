@@ -1,0 +1,23 @@
+(* The value assigned may come from a call, and carries the declared result
+   type of the function called. *)
+program results
+
+define number() -> integer
+begin
+    exit 1
+end
+
+define flag() -> boolean
+begin
+    exit true
+end
+
+begin
+    integer i;
+    boolean b;
+
+    i <- number();
+    b <- flag();
+    i <- flag();
+    b <- number()
+end

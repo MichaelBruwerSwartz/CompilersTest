@@ -1,0 +1,15 @@
+(* Comments (* nest *) and may stand wherever whitespace may. *)
+program commented
+
+(* between declarations *)
+integer global; (* after one *)
+
+define f(integer (* inside a parameter list *) n) -> integer
+begin
+    exit (* inside an expression *) n
+end
+
+begin
+    global <- f(1) (* between a call and its separator *) ;
+    write global
+end

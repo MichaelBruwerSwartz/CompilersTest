@@ -1,0 +1,23 @@
+(* A function yields a value, so a call to one is not a statement. *)
+program discarding
+
+define number() -> integer
+begin
+    exit 1
+end
+
+define flag() -> boolean
+begin
+    exit true
+end
+
+define procedure()
+begin
+    chill
+end
+
+begin
+    number();
+    flag();
+    procedure()
+end

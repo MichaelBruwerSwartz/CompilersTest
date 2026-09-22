@@ -1,0 +1,8 @@
+(* Assignment is spelled "<-"; "=" is the equality operator. *)
+program assigning
+
+begin
+    integer i;
+
+    i = 1
+end

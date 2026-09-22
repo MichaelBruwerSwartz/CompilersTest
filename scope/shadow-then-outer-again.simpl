@@ -1,0 +1,23 @@
+(* A popped scope is no longer in the chain, so the name the sibling below sees
+   is the outer one again, at the outer type. *)
+program restored
+
+integer shared;
+
+define hides()
+begin
+    boolean shared;
+
+    shared <- true
+end
+
+define sees()
+begin
+    shared <- 2
+end
+
+begin
+    shared <- 1;
+    hides();
+    sees()
+end

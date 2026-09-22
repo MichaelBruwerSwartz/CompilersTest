@@ -1,0 +1,14 @@
+(* A binary operator checks its left operand, then its right, and stops at the
+   first that is wrong: two bad operands still draw one message. *)
+program once
+
+begin
+    boolean b, c;
+    integer i;
+
+    b <- true;
+    c <- false;
+
+    i <- b + c;
+    i <- 1 + c
+end

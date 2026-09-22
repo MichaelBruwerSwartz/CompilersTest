@@ -1,0 +1,4 @@
+line 14:11 incompatible types (expected integer, found boolean) for unary minus
+line 15:11 incompatible types (expected integer, found boolean) for unary minus
+line 16:10 unary minus is an illegal array operation
+line 17:11 incompatible types (expected integer, found boolean) for unary minus

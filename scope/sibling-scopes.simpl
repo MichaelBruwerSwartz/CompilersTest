@@ -1,0 +1,26 @@
+(* Sibling functions cannot see each other's locals, and a nested function is
+   invisible to a sibling of the function that contains it. *)
+program siblings
+
+define first()
+begin
+    integer firstLocal;
+
+    define helper()
+    begin
+        chill
+    end
+
+    firstLocal <- 1
+end
+
+define second()
+begin
+    firstLocal <- 2;
+    helper()
+end
+
+begin
+    first();
+    second()
+end

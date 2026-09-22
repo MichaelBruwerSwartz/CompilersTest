@@ -1,0 +1,24 @@
+(* Loops nest, and hold every other kind of statement. *)
+program loops
+
+begin
+    integer i, j, total;
+
+    i <- 0;
+    total <- 0;
+
+    while i < 3 do
+        j <- 0;
+        while j < 3 do
+            if (i + j) mod 2 = 0 then
+                total <- total + i * j
+            else
+                total <- total - 1
+            end;
+            j <- j + 1
+        end;
+        i <- i + 1
+    end;
+
+    write total
+end

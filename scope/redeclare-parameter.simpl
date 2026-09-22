@@ -1,0 +1,19 @@
+(* Parameters are declared in the function's own scope, so they collide with
+   each other and with the function's local variables. *)
+program parameters
+
+define f(integer a, boolean a)
+begin
+    integer b;
+    chill
+end
+
+define g(integer c)
+begin
+    boolean c;
+    chill
+end
+
+begin
+    chill
+end

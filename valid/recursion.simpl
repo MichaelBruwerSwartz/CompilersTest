@@ -1,0 +1,15 @@
+(* A function is declared before its own body is walked, so it may call itself. *)
+program recursive
+
+define fact(integer n) -> integer
+begin
+    if n <= 1 then
+        exit 1
+    else
+        exit n * fact(n - 1)
+    end
+end
+
+begin
+    write "5! = " & fact(5)
+end

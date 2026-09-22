@@ -1,0 +1,2 @@
+line 5:5 extraneous input 'define' expecting {'exit', 'if', 'read', 'while', 'write', ID}
+line 6:5 mismatched input 'begin' expecting {'end', ';'}

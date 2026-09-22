@@ -1,0 +1,14 @@
+(* A program in the shape assignment 1 allowed: functions, then the body.
+   The extended grammar must still accept it unchanged. *)
+program legacy
+
+define square(integer n) -> integer
+begin
+    exit n * n
+end
+
+begin
+    integer x;
+    x <- square(7);
+    write "x = " & x
+end

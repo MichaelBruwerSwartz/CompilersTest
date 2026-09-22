@@ -1,0 +1,9 @@
+(* Parentheses nest as deeply as they are written. *)
+program deep
+
+begin
+    integer i;
+
+    i <- ((((((((((1))))))))));
+    i <- (((1 + (((2))) * (((3 - (((4)))))))))
+end

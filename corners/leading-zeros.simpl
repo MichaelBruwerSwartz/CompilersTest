@@ -1,0 +1,10 @@
+(* A numeric literal may open with zeros. *)
+program zeros
+
+begin
+    integer i;
+
+    i <- 007;
+    i <- 0;
+    i <- 00000
+end

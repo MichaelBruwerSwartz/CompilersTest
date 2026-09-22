@@ -1,0 +1,23 @@
+(* One namespace per scope: the program name, functions and variables all live
+   in it, so any two of them with the same name collide. *)
+program clash
+
+integer clash;
+
+define v()
+begin
+    chill
+end
+
+boolean v;
+
+integer w;
+
+define w()
+begin
+    chill
+end
+
+begin
+    chill
+end

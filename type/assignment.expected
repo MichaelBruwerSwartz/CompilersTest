@@ -1,0 +1,10 @@
+line 18:10 incompatible types (expected integer, found boolean) for assignment to 'i'
+line 19:10 incompatible types (expected boolean, found integer) for assignment to 'b'
+line 20:10 incompatible types (expected integer, found integer array) for assignment to 'i'
+line 21:10 incompatible types (expected integer array, found integer) for assignment to 'a'
+line 22:10 incompatible types (expected integer array, found boolean array) for assignment to 'a'
+line 23:13 incompatible types (expected integer, found boolean) for assignment to 'a'
+line 24:13 incompatible types (expected boolean, found integer) for assignment to 'c'
+line 25:10 missing argument list for function 'f'
+line 26:5 'f' is not a variable
+line 27:5 'assignment' is not a variable

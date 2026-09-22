@@ -1,0 +1,3 @@
+line 17:10 incompatible types (expected boolean, found integer) for assignment to 'b'
+line 18:10 incompatible types (expected integer, found boolean) for assignment to 'i'
+line 19:15 incompatible types (expected integer, found boolean) for operator '+'

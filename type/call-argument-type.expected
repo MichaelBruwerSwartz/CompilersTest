@@ -1,0 +1,3 @@
+line 11:11 incompatible types (expected integer, found boolean) for parameter 1 of call to 'three'
+line 12:14 incompatible types (expected boolean, found integer) for parameter 2 of call to 'three'
+line 13:20 incompatible types (expected integer, found boolean) for parameter 3 of call to 'three'

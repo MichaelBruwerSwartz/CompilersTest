@@ -1,0 +1,18 @@
+(* A leading "-" takes an integer and yields one; the message carries no
+   quotes, since the operator is named rather than spelled. *)
+program negation
+
+boolean array c;
+
+begin
+    integer i;
+    boolean b;
+
+    c <- array 2;
+    b <- true;
+
+    i <- -b;
+    i <- -c[0];
+    i <- -c;
+    i <- -(b or b)
+end

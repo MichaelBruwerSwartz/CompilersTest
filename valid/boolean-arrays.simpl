@@ -1,0 +1,18 @@
+(* A boolean array is allocated, indexed, assigned to and read from like an
+   integer one; its elements are booleans. *)
+program flags
+
+boolean array global;
+
+begin
+    boolean array local;
+    boolean b;
+
+    global <- array 3;
+    local <- array 3;
+    global[0] <- true;
+    local[1] <- not global[0];
+    b <- local[1] or global[2];
+    local <- global;
+    write b & local[0]
+end

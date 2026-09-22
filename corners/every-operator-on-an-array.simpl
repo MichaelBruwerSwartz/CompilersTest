@@ -1,0 +1,30 @@
+(* Every operator against a whole array, one to a line, to read the message
+   each of them draws. *)
+program operators
+
+integer array a, b;
+
+begin
+    boolean flag;
+    integer i;
+
+    a <- array 2;
+    b <- array 2;
+
+    i <- a + b;
+    i <- a - b;
+    i <- a * b;
+    i <- a / b;
+    i <- a mod b;
+    i <- -a;
+    flag <- a and b;
+    flag <- a or b;
+    flag <- not a;
+    flag <- a = b;
+    flag <- a # b;
+    flag <- a < b;
+    flag <- a <= b;
+    flag <- a > b;
+    flag <- a >= b;
+    write a
+end

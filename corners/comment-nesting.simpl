@@ -1,0 +1,9 @@
+(* Lexer: comments nest, and a comment marker inside a string opens nothing.
+   The header you are reading may hold no marker of its own for that reason. *)
+program comments
+
+(* outer (* inner (* innermost *) still inner *) outer again *)
+
+begin
+    write "(* not a comment *)"
+end

@@ -1,0 +1,8 @@
+(* A nested function whose body is never closed swallows the enclosing end. *)
+program unclosed
+begin
+    define f()
+    begin
+        chill
+    chill
+end

@@ -1,0 +1,18 @@
+(* A parameter is a variable of the function's own scope, so it may be
+   assigned to, indexed into and allocated for like any other. *)
+program parameters
+
+define f(integer n, integer array values) -> integer
+begin
+    n <- n + 1;
+    values[0] <- n;
+    values <- array 4;
+    exit values[0]
+end
+
+begin
+    integer array numbers;
+
+    numbers <- array 2;
+    write f(1, numbers)
+end

@@ -1,0 +1,23 @@
+(* The positive side of 5.2.4: a whole array may be allocated for, assigned to
+   a variable of its own type, passed, and returned. type/arrays.simpl holds
+   the other side. Brackets round the whole array are the one corner 5.3.1's
+   "nothing but this identifier" leaves open: they apply no operation, and the
+   type propagates through them, so they are allowed. *)
+program whole
+
+integer array g;
+
+define pass(integer array v) -> integer array
+begin
+    exit v
+end
+
+begin
+    integer array a, b;
+
+    a <- array 4;
+    b <- a;
+    b <- (a);
+    g <- pass(b);
+    write g[0]
+end

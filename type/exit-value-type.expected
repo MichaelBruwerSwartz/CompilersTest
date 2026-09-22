@@ -1,0 +1,2 @@
+line 6:10 incompatible types (expected integer, found boolean) for 'exit' statement
+line 11:10 incompatible types (expected boolean, found integer) for 'exit' statement

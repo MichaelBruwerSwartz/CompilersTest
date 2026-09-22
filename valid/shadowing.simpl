@@ -1,0 +1,27 @@
+(* Inner declarations shadow outer ones; outer declarations stay visible where
+   they are not shadowed. *)
+program shadow
+
+integer x;
+boolean y;
+
+define f(boolean x) -> boolean
+begin
+    integer y;
+
+    define g() -> integer
+    begin
+        integer x;
+        x <- 3;
+        exit x + y
+    end
+
+    y <- g();
+    exit x
+end
+
+begin
+    x <- 1;
+    y <- f(false);
+    write x
+end

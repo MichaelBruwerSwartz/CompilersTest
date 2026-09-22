@@ -1,0 +1,10 @@
+(* Carriage returns are whitespace, so a file written on another system lexes
+   the same and the line numbers do not drift. *)
+program endings
+
+begin
+    integer i;
+
+    i <- 1;
+    i <- true
+end

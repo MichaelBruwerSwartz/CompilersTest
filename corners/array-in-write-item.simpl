@@ -1,0 +1,13 @@
+(* Decision 7: writing an array is an illegal array operation blamed on the
+   item, not on the keyword, so two bad items draw two messages. *)
+program writing
+
+integer array a;
+boolean array c;
+
+begin
+    a <- array 2;
+    c <- array 2;
+
+    write a & "and" & c
+end

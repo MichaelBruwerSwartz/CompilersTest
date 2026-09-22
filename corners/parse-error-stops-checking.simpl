@@ -1,0 +1,11 @@
+(* Decision 9: a recovered tree has holes in it, so nothing is checked after a
+   syntax error. The undeclared name and the type error below draw nothing. *)
+program broken
+
+begin
+    integer i;
+
+    i <- 1
+    i <- ghost;
+    i <- true
+end

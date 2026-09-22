@@ -1,0 +1,8 @@
+# docker compose run --rm tests            every test
+# docker compose run --rm tests type scope  only those groups
+# SRC=path docker compose run --rm tests   sources somewhere other than ../src
+services:
+  tests:
+    build: .
+    volumes:
+      - ${SRC:-../src}:/work/src:ro

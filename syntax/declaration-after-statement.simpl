@@ -1,0 +1,8 @@
+(* Declarations may be mixed with each other, but not with statements. *)
+program late
+begin
+    integer x;
+    x <- 1;
+    integer y;
+    y <- 2
+end

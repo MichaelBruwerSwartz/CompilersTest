@@ -1,0 +1,6 @@
+(* A program opens with the "program" keyword. *)
+main
+
+begin
+    chill
+end

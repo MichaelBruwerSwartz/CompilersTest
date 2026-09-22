@@ -1,0 +1,13 @@
+(* "and", "or" and "not" take boolean operands. *)
+program booleans
+begin
+    integer i;
+    boolean b;
+
+    b <- i and true;
+    b <- true and i;
+    b <- i or b;
+    b <- b or i;
+    b <- not i;
+    b <- not not i
+end

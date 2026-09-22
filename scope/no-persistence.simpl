@@ -1,0 +1,20 @@
+(* A declaration is invisible outside the scope that immediately contains it. *)
+program persistence
+
+define f(integer parameter)
+begin
+    integer local;
+
+    define nested()
+    begin
+        chill
+    end
+
+    local <- parameter
+end
+
+begin
+    local <- 1;
+    parameter <- 2;
+    nested()
+end

@@ -1,0 +1,18 @@
+(* A keyword is a whole word: an identifier opening with one is an identifier,
+   and the lexer must prefer the longer match. *)
+program keywords
+
+begin
+    integer integerValue;
+    integer iffy;
+    integer endish;
+    integer programme;
+    boolean nottrue;
+
+    integerValue <- 1;
+    iffy <- 2;
+    endish <- 3;
+    programme <- 4;
+    nottrue <- false;
+    write integerValue & iffy & endish & programme & nottrue
+end

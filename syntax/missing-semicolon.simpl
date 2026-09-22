@@ -1,0 +1,9 @@
+(* Two statements in a row need the separator between them. *)
+program running
+
+begin
+    integer i;
+
+    i <- 1
+    i <- 2
+end

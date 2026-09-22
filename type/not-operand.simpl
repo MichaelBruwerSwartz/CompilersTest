@@ -1,0 +1,17 @@
+(* "not" takes a boolean and yields one. *)
+program negating
+
+integer array a;
+
+begin
+    boolean b;
+    integer i;
+
+    a <- array 2;
+    i <- 1;
+
+    b <- not i;
+    b <- not a[0];
+    b <- not a;
+    b <- not (i + 1)
+end

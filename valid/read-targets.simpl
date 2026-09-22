@@ -1,0 +1,20 @@
+(* "read" fills a scalar location: a variable of either scalar type, local or
+   global, or one element of an array. *)
+program reading
+
+integer global;
+boolean flag;
+
+begin
+    integer local;
+    integer array a;
+
+    a <- array 2;
+
+    read global;
+    read flag;
+    read local;
+    read a[0];
+    read a[local + 1];
+    write global & flag & local & a[0]
+end

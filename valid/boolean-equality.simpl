@@ -1,0 +1,19 @@
+(* "=" and "#" take two operands of the same type, so they compare booleans as
+   readily as integers. *)
+program equality
+
+begin
+    boolean b, c;
+    integer i, j;
+
+    b <- true;
+    c <- false;
+    i <- 1;
+    j <- 2;
+
+    b <- b = c;
+    b <- b # c;
+    b <- i = j;
+    b <- i # j;
+    b <- (i = j) = (b # c)
+end

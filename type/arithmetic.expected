@@ -1,0 +1,7 @@
+line 8:12 incompatible types (expected integer, found boolean) for operator '+'
+line 9:12 incompatible types (expected integer, found boolean) for operator '-'
+line 10:12 incompatible types (expected integer, found boolean) for operator '*'
+line 11:12 incompatible types (expected integer, found boolean) for operator '/'
+line 12:12 incompatible types (expected integer, found boolean) for operator 'mod'
+line 13:11 incompatible types (expected integer, found boolean) for unary minus
+line 14:12 '+' is an illegal array operation

@@ -1,0 +1,16 @@
+(* An argument is an expression like any other, so an undeclared name inside
+   one is reported where it stands. *)
+program arguments
+
+define f(integer n) -> integer
+begin
+    exit n
+end
+
+begin
+    integer i;
+
+    i <- f(ghost);
+    i <- f(ghost + 1);
+    i <- f(f(ghost))
+end

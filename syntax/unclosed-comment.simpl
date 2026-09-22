@@ -1,0 +1,8 @@
+(* A comment still open at the end of the file is an error, blamed on the
+   innermost opening marker. *)
+program unclosed
+
+begin
+    chill
+end
+(* the comment that is never closed

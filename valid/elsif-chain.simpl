@@ -1,0 +1,24 @@
+(* An "if" carries any number of "elsif" arms and at most one "else". *)
+program branching
+
+begin
+    integer i;
+
+    i <- 3;
+
+    if i = 1 then
+        write "one"
+    elsif i = 2 then
+        write "two"
+    elsif i = 3 then
+        write "three"
+    elsif i = 4 then
+        write "four"
+    else
+        write "many"
+    end;
+
+    if i > 0 then
+        chill
+    end
+end

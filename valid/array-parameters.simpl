@@ -1,0 +1,36 @@
+(* An array passes to a parameter of its own type and returns from a function
+   declared to yield one, whole and unindexed. *)
+program passing
+
+define fill(integer array values, integer n) -> integer array
+begin
+    integer i;
+
+    i <- 0;
+    while i < n do
+        values[i] <- i;
+        i <- i + 1
+    end;
+    exit values
+end
+
+define sum(integer array values, integer n) -> integer
+begin
+    integer i, total;
+
+    i <- 0;
+    total <- 0;
+    while i < n do
+        total <- total + values[i];
+        i <- i + 1
+    end;
+    exit total
+end
+
+begin
+    integer array numbers;
+
+    numbers <- array 4;
+    numbers <- fill(numbers, 4);
+    write sum(numbers, 4)
+end

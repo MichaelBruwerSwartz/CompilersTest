@@ -1,0 +1,29 @@
+(* A whole array reaches no operator. It may only be assigned to a variable of
+   its own type, passed, returned, indexed, allocated for, or created. *)
+program arrays
+
+integer array a;
+boolean array c;
+
+define take(integer array values) -> integer array
+begin
+    exit values
+end
+
+begin
+    integer i;
+    boolean b;
+
+    a <- array 2;
+    c <- array 2;
+
+    i <- a + 1;
+    i <- a * a;
+    i <- -a;
+    b <- a = c;
+    b <- a < a;
+    b <- not c;
+    write a;
+    a <- take(a);
+    a <- take(c)
+end

@@ -1,0 +1,27 @@
+(* An array parameter takes an array of its own type, whole; a scalar
+   parameter takes no array at all. *)
+program passing
+
+integer array ia;
+boolean array ba;
+
+define takesArray(integer array values)
+begin
+    chill
+end
+
+define takesScalar(integer n)
+begin
+    chill
+end
+
+begin
+    ia <- array 2;
+    ba <- array 2;
+
+    takesArray(ia);
+    takesArray(ba);
+    takesArray(1);
+    takesScalar(ia);
+    takesScalar(ia[0])
+end

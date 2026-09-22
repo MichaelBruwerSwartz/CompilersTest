@@ -1,0 +1,27 @@
+(* read needs a scalar location; write needs a string or a scalar value. *)
+program io
+
+integer array a;
+boolean array c;
+
+define f()
+begin
+    chill
+end
+
+begin
+    integer i;
+
+    a <- array 2;
+    c <- array 2;
+
+    read a;
+    read c;
+    read f;
+    read io;
+    write a;
+    write c;
+    write "text" & a & i;
+    write f();
+    write i
+end

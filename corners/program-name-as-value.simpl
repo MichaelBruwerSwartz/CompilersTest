@@ -1,0 +1,9 @@
+(* Decision 2: the program name occupies the outermost scope, so reaching for
+   it as a value is not an unknown identifier but a name that is no variable. *)
+program subject
+
+begin
+    integer i;
+
+    i <- subject
+end

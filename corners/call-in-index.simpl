@@ -1,0 +1,24 @@
+(* A call stands in an index like any other expression, and the index of a
+   call's argument is checked in turn. *)
+program calling
+
+integer array a;
+
+define at(integer n) -> integer
+begin
+    exit n
+end
+
+define flag() -> boolean
+begin
+    exit true
+end
+
+begin
+    integer i;
+
+    a <- array 4;
+    i <- a[at(1)];
+    i <- a[at(a[0])];
+    i <- a[flag()]
+end

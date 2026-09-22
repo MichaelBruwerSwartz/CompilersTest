@@ -1,0 +1,10 @@
+(* A numeric literal is a run of digits; nothing in the grammar bounds it. *)
+program numbers
+
+begin
+    integer i;
+
+    i <- 99999999999999999999;
+    i <- 2147483648;
+    i <- 4294967296 + 1
+end

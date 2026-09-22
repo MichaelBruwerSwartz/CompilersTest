@@ -1,0 +1,14 @@
+(* An index is an expression, and so is the name being indexed: either may be
+   undeclared, and both are reported. *)
+program indices
+
+integer array a;
+
+begin
+    integer i;
+
+    a <- array 4;
+    i <- a[ghost];
+    i <- missing[0];
+    i <- missing[ghost]
+end

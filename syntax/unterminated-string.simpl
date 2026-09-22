@@ -1,0 +1,6 @@
+(* A string closes on the line it opens. *)
+program unterminated
+
+begin
+    write "no closing quote
+end

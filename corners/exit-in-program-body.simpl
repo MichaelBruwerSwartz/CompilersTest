@@ -1,0 +1,8 @@
+(* Decision 6: the program body yields nothing, so a bare exit is fine there
+   and a value has nowhere to go. *)
+program leaving
+
+begin
+    exit;
+    exit 1
+end

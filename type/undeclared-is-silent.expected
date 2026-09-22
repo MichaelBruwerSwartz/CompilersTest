@@ -1,0 +1,13 @@
+line 11:10 unknown identifier 'ghost'
+line 12:10 unknown identifier 'ghost'
+line 13:10 unknown identifier 'ghost'
+line 14:10 unknown identifier 'ghost'
+line 15:5 unknown identifier 'ghost'
+line 16:5 unknown identifier 'ghost'
+line 17:5 unknown identifier 'ghost'
+line 18:10 unknown identifier 'ghost'
+line 19:11 unknown identifier 'ghost'
+line 20:10 unknown identifier 'ghost'
+line 20:16 incompatible types (expected integer, found boolean) for operator '+'
+line 21:10 unknown identifier 'ghost'
+line 21:10 an exit expression is not allowed for a procedure

@@ -1,0 +1,18 @@
+(* "and" takes two booleans and yields one; the left operand is checked first. *)
+program conjunction
+
+integer array a;
+
+begin
+    boolean b;
+    integer i;
+
+    a <- array 2;
+    b <- true;
+    i <- 1;
+
+    b <- i and b;
+    b <- b and i;
+    b <- i and i;
+    b <- a and b
+end

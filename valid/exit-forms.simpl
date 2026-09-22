@@ -1,0 +1,31 @@
+(* exit without a value in the program body and in a procedure; exit with a
+   value of the declared result type in a function. *)
+program exits
+
+define procedure(integer n)
+begin
+    if n = 0 then
+        exit
+    end;
+    write n
+end
+
+define answer() -> boolean
+begin
+    exit true
+end
+
+define pick() -> integer array
+begin
+    integer array a;
+    a <- array 2;
+    exit a
+end
+
+begin
+    procedure(0);
+    if answer() then
+        write "yes"
+    end;
+    exit
+end

@@ -1,0 +1,12 @@
+(* A scope holds at most one declaration per identifier, whether the second one
+   comes from the same vardef or a later one. *)
+program redeclared
+
+integer g;
+boolean g;
+
+begin
+    integer x, y, x;
+    boolean y;
+    chill
+end

@@ -1,0 +1,6 @@
+(* Global declarations precede the top-level body; nothing follows it. *)
+program trailing
+begin
+    chill
+end
+integer late;

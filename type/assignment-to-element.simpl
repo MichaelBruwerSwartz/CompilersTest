@@ -1,0 +1,16 @@
+(* An indexed array is a location of the element type, so the value assigned
+   is checked against that rather than against the array. *)
+program elements
+
+integer array a;
+boolean array c;
+
+begin
+    a <- array 2;
+    c <- array 2;
+
+    a[0] <- true;
+    c[0] <- 1;
+    a[0] <- 1;
+    c[0] <- false
+end

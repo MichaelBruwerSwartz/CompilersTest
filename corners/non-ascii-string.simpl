@@ -1,0 +1,7 @@
+(* A string holds printable seven-bit ASCII, so a character above that range
+   is outside it. The word below carries a real e-acute. *)
+program ascii
+
+begin
+    write "café"
+end

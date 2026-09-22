@@ -1,0 +1,20 @@
+(* An indexed array yields its element type: integer from an integer array,
+   boolean from a boolean one. *)
+program elements
+
+integer array a;
+boolean array c;
+
+begin
+    integer i;
+    boolean b;
+
+    a <- array 2;
+    c <- array 2;
+
+    i <- a[0];
+    b <- c[0];
+    b <- a[0];
+    i <- c[0];
+    i <- a[0] + c[0]
+end

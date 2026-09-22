@@ -1,0 +1,15 @@
+(* Ten parameters and ten arguments, to see that the position in the message
+   counts past one digit. *)
+program many
+
+define ten(integer a, integer b, integer c, integer d, integer e,
+           integer f, integer g, integer h, integer i, integer j) -> integer
+begin
+    exit a + b + c + d + e + f + g + h + i + j
+end
+
+begin
+    write ten(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    write ten(1, 2, 3, 4, 5, 6, 7, 8, 9, true);
+    write ten(1, 2, 3, 4, 5, 6, 7, 8, 9)
+end

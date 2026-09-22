@@ -1,0 +1,28 @@
+(* No persistence: two siblings may each declare "local", and a third that
+   declares none reaches neither. *)
+program siblings
+
+define first()
+begin
+    integer local;
+
+    local <- 1
+end
+
+define second()
+begin
+    boolean local;
+
+    local <- true
+end
+
+define third()
+begin
+    local <- 3
+end
+
+begin
+    first();
+    second();
+    third()
+end

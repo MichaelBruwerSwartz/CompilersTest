@@ -1,0 +1,2 @@
+line 7:5 extraneous input 'chill' expecting 'end'
+line 9:1 extraneous input '<EOF>' expecting {'define', 'chill', 'boolean', 'integer', 'exit', 'if', 'read', 'while', 'write', ID}

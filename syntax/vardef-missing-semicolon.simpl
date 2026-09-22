@@ -1,0 +1,9 @@
+(* A variable definition ends with ";". *)
+program unterminated
+
+begin
+    integer i
+    boolean b;
+
+    chill
+end

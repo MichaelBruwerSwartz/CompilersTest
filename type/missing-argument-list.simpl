@@ -1,0 +1,20 @@
+(* A function named without an argument list is not a value. *)
+program naming
+
+define number() -> integer
+begin
+    exit 1
+end
+
+define procedure()
+begin
+    chill
+end
+
+begin
+    integer i;
+
+    i <- number;
+    i <- number + 1;
+    write procedure
+end

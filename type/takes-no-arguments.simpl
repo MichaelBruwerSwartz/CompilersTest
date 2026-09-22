@@ -1,0 +1,21 @@
+(* A subroutine declared without parameters is called with an empty list, and
+   the message says so rather than counting. *)
+program counting
+
+define number() -> integer
+begin
+    exit 1
+end
+
+define procedure()
+begin
+    chill
+end
+
+begin
+    integer i;
+
+    i <- number(1);
+    procedure(1, 2);
+    i <- number()
+end
