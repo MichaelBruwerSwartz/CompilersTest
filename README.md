@@ -84,13 +84,13 @@ What is compared is **which messages come out**, not the order they come out in:
 - **`FAIL`** — a message is missing, extra, spelled differently or at another
   position. It prints mine and yours, to be read: these files hold my wording and
   my positions, so a `FAIL` may be a difference of convention rather than a
-  mistake — see *Reds and fixes*, and *What the recorded output assumes*.
+  mistake — see *Fixes*, and *What the recorded output assumes*.
 
 The run exits non-zero only when something is `FAIL`.
 
-## Reds and fixes
+## Fixes
 
-| The red you see | The fix |
+| What you see | The fix |
 |---|---|
 | every position off by one, `line 8:11` against my `line 8:12` | you count columns from 0, as ANTLR hands them; these files count from 1. Shift the column where the message is recorded, not where it is printed |
 | `ORDER` on a program with both kinds of message | nothing to fix, it passes: you group by pass, I merge into one source order |
