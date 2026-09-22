@@ -6,9 +6,10 @@
 #   ./test/run.sh type scope      only those groups
 #   ./test/run.sh -c              remove test/build/
 #
-# It looks for your grammars and Java in src/ beside this test directory, and
-# builds into test/build/. Nothing outside test/ is written. The driver class
-# is "simpl"; if yours has another name, say MAIN=yourclass ./test/run.sh.
+# It looks for your grammars and Java in src/ beside this test directory, for
+# an antlr*.jar in the usual places, and builds into test/build/. Nothing
+# outside test/ is written. The driver class is "simpl"; if yours has another
+# name, say MAIN=yourclass ./test/run.sh.
 
 set -euo pipefail
 
@@ -16,11 +17,23 @@ SELF="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT="$(dirname "$SELF")"
 SRC="${SRC:-$PROJECT/src}"
 BUILD="$SELF/build"
-ANTLR_JAR="${ANTLR_JAR:-$HOME/antlr/antlr-4.13.2-complete.jar}"
 MAIN="${MAIN:-simpl}"
 SUITES=(valid scope type syntax corners)
 
 die() { echo "run.sh: $*" >&2; exit 2; }
+
+# The jar: wherever you already keep it. First antlr*.jar beside your grammars,
+# in here, at the top of the project, in ~/antlr or in ~; ANTLR_JAR=path wins
+find_jar() {
+    local where found
+    for where in "$SRC" "$SELF" "$PROJECT" "$HOME/antlr" "$HOME"; do
+        [ -d "$where" ] || continue
+        found="$(find "$where" -maxdepth 1 -name 'antlr*.jar' -print -quit 2>/dev/null)"
+        [ -n "$found" ] && { echo "$found"; return 0; }
+    done
+    return 0   # not found is not an error here; the check below says so
+}
+ANTLR_JAR="${ANTLR_JAR:-$(find_jar)}"
 
 # Colour for a terminal, plain text for a pipe or when NO_COLOR is set.
 if [ -t 1 ] && [ -z "${NO_COLOR:-}" ]; then
@@ -35,12 +48,13 @@ if [ "${1:-}" = "-c" ]; then
     exit 0
 fi
 
-[ -f "$ANTLR_JAR" ] || die "no ANTLR jar at $ANTLR_JAR (override with ANTLR_JAR=...)"
+[ -n "$ANTLR_JAR" ] && [ -f "$ANTLR_JAR" ] || \
+    die "no antlr*.jar found; drop one beside your grammars in ${SRC#"$PROJECT"/}, or say ANTLR_JAR=path"
 [ -d "$SRC" ] || die "no directory at $SRC; put your grammars and Java there, or say SRC=..."
 
 # --- build ------------------------------------------------------------
 mkdir -p "$BUILD"
-echo "building..." >&2
+echo "building with ${ANTLR_JAR##*/}..." >&2
 
 # A split grammar needs the lexer generated first, for its token vocabulary.
 lexer="$(find "$SRC" -maxdepth 1 -name '*[Ll]exer.g4' -print -quit)"

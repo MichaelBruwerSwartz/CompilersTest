@@ -19,7 +19,7 @@ your-project/
 │   └── simpl.java    the driver class
 └── test/             <- this repository, cloned or unzipped here
     ├── run.sh        the runner
-    ├── Dockerfile    the same runner, with the JDK and ANTLR supplied
+    ├── Dockerfile    the same runner, for anyone without a JDK to hand
     ├── compose.yaml
     ├── README.md     this file
     ├── valid/        30 programs
@@ -30,28 +30,12 @@ your-project/
     └── build/        generated and compiled output, made on the first run
 ```
 
-## Running in a container
+## Running
 
-Nothing to install but Docker: the image carries a JDK and the ANTLR jar, and
-your sources are mounted read-only, so nothing of yours is written to.
-
-```bash
-docker build -t simpl-tests test/                                  # once
-docker run --rm -v "$PWD/src:/work/src:ro" simpl-tests             # every test
-docker run --rm -v "$PWD/src:/work/src:ro" simpl-tests type scope  # only those groups
-```
-
-Or with compose, from inside this directory:
-
-```bash
-docker compose run --rm tests
-docker compose run --rm tests type scope
-SRC=../mysrc docker compose run --rm tests     # sources somewhere else
-```
-
-Say `-e MAIN=name` if your driver class is not called `simpl`.
-
-## Running on your own machine
+You need a JDK and the ANTLR jar, which you have already, and nothing else. Put
+the jar wherever you keep it — beside your grammars in `src/`, in here, at the
+top of the project, in `~/antlr` or in `~` — and the runner takes the first
+`antlr*.jar` it finds in those places. It says which one it used when it builds.
 
 ```bash
 ./test/run.sh                every test, one line each
@@ -61,9 +45,26 @@ Say `-e MAIN=name` if your driver class is not called `simpl`.
 
 It generates every `.g4` it finds, whether that is a split lexer and parser or
 one combined grammar, and compiles every `.java` beside them. `SRC=path` if your
-sources are not in `src/`, `ANTLR_JAR=path` if the jar is not at
-`~/antlr/antlr-4.13.2-complete.jar`, `MAIN=name` if your driver class is
-not called `simpl`.
+sources are not in `src/`, `ANTLR_JAR=path` if the jar is somewhere else again,
+`MAIN=name` if your driver class is not called `simpl`.
+
+The `syntax/` group records ANTLR's own parser messages verbatim, and those get
+reworded between releases, so a jar that is not 4.13.x may differ there. The
+wording is printed beneath the failure, to be read.
+
+## In a container, if you would rather not install anything
+
+`Dockerfile` is the same runner with a JDK and the 4.13.2 jar supplied. Your
+sources are mounted read-only, and nothing of yours is written to.
+
+```bash
+docker build -t simpl-tests test/
+docker run --rm -v "$PWD/src:/work/src:ro" simpl-tests             # every test
+docker run --rm -v "$PWD/src:/work/src:ro" simpl-tests type scope  # only those groups
+docker compose run --rm tests                                      # from inside test/
+```
+
+Say `-e MAIN=name` if your driver class is not called `simpl`.
 
 ## Reading the result
 
